@@ -12,6 +12,9 @@ on:
 env:
   LABELS: ${{ join( github.event.pull_request.labels.*.name, ' ' ) }}
 
+permissions:
+  contents: read
+
 jobs:
   check-type-label:
     name: ensure type label
